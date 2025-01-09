@@ -1,0 +1,19 @@
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/variables" as *;
+
+// =============================
+// All elements
+// =============================
+
+* {
+  box-sizing: border-box;
+  @include reset;
+}
+
+// =============================
+// Variables
+// =============================
+
+// =============================
+// Mixins
+// =============================
