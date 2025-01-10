@@ -1,0 +1,19 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.progile-card {
+    @include card-border;
+    @include tag-style;
+
+    &__name {
+        // Styles here
+    }
+
+    &__photo {
+        // Styles here
+    }
+
+    &__intro {
+        // Styles here
+    }
+}

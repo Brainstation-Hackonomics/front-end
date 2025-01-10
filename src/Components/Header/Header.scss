@@ -1,0 +1,12 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.header {
+    @include header-style;
+
+    &__title {
+        // Styles here
+    }
+
+    
+}
