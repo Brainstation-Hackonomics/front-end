@@ -2,17 +2,63 @@
 @use "../../styles/partials/variables" as *;
 
 .footer {
-    // Styles here
+  padding: 1rem;
 
-    &__container {
-        // Styles here
-    }
+  @include tablet {
+    padding: 1rem 2rem;
+  }
 
-    &__links {
-        // Styles here
-    }
+  @include desktop {
+    padding: 2rem 3rem 1rem 3rem;
+  }
 
-    &__socials {
-        // Styles here
+  &__logo {
+    @include height-width(3rem, auto);
+    margin-bottom: 0.75rem;
+  }
+
+  &__right {
+    @include flex-box(flex-start, baseline, nowrap, column);
+    padding: 1rem 0 0 0;
+
+    @include tablet {
+      @include flex-box(space-between, center, nowrap, row);
+      max-width: 46.875rem;
     }
+  }
+
+  &__left {
+    @include tablet {
+      @include flex-box(space-between, center, nowrap, row-reverse);
+    }
+  }
+
+  &__item {
+    margin: 0;
+    padding-bottom: 0.5rem;
+    color: #333;
+    padding: 0 0.5rem 0.5rem 0;
+  }
+}
+
+.socials {
+  &__x {
+    @include footer-icon(1.75rem, 1.75rem);
+  }
+
+  &__instagram {
+    @include footer-icon(2rem, 2rem);
+  }
+
+  &__facebook {
+    @include footer-icon(2rem, 2rem);
+  }
+
+  &__linkedin {
+    @include footer-icon(2rem, 2rem);
+  }
+
+  &__youtube {
+    @include footer-icon(2.2rem, 2.2rem);
+  }
 }

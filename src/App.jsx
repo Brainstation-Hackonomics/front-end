@@ -5,10 +5,13 @@ import Arrow from "../src/assets/images/Arrow.svg";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./Pages/MainPage/MainPage.jsx";
 import ProfilePage from "./Pages/ProfilePage/ProfilePage.jsx"
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
     <>
+      <Header />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage/>}/>
@@ -31,6 +34,7 @@ function App() {
         autem? Exercitationem, modi.
       </p>
       <ProfileCard></ProfileCard>
+      <Footer />
     </>
   );
 }
