@@ -97,20 +97,31 @@
   color: $grey;
   background-color: $primary-white;
   padding: 0.25rem 0.75rem;
-  border: $light-grey solid 0.08rem;
-  border-radius: 0.35rem;
+  border: $light-grey solid 0.05rem;
+  border-radius: 20px;
   font-weight: 500;
-  box-shadow: 0 0.063rem 0.313rem 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.01rem 0.05rem 0 rgba(0, 0, 0, 0.25);
   text-decoration: none;
   list-style: none;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  font-size: 12rem;
+
   cursor: pointer;
-  @include body-small;
+
+  @include body-medium;
   @include tablet {
     padding: 0.25rem 1rem;
     border-width: 0.15rem;
-    @include body-medium;
+    font-size: 1rem;
   }
   &:hover {
+    background-color: $light-grey;
+    color: $primary-white;
+  }
+
+  &--selected {
     background-color: $light-grey;
     color: $primary-white;
   }
