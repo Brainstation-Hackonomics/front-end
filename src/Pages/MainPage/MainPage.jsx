@@ -1,7 +1,7 @@
 import "./MainPage.scss";
-import Header from "../../Components/Header/Header";
-import Filters from "../../Components/Filters/Filters";
-import MainPageCard from "../../Components/MainPageCard/MainPageCard";
+import Header from "../../Components/Header/Header.jsx";
+import Filters from "../../Components/Filters/Filters.jsx";
+import MainPageCard from "../../Components/MainPageCard/MainPageCard.jsx";
 import { useState } from "react";
 
 
@@ -33,7 +33,7 @@ function MainPage() {
     <>
       <Header filterClickHandler={filterClickHandler}/>
 
-      {isFilterOpen?<Filters tagClickHandler={tagClickHandler}  selectedTags={selectedTags}/>: ""}
+      <Filters tagClickHandler={tagClickHandler}  selectedTags={selectedTags}/>
 
       <MainPageCard></MainPageCard>
     </>

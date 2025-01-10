@@ -56,7 +56,7 @@ function Filters(prop) {
         <ul className="filter__list">
         {philosophy.map((item, index) => {
           return(
-            <li key={index} className={prop.selectedTags.includes({item})?"filter__tags":"filter__tags"} onClick={prop.tagClickHandler}>{item}</li>
+            <li key={index} className="filter__tag" onClick={prop.tagClickHandler}>{item}</li>
           )
         })}
         </ul>

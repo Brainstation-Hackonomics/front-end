@@ -8,18 +8,16 @@ import ProfilePage from "./Pages/ProfilePage/ProfilePage.jsx"
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import MainPageCard from "./Components/MainPageCard/MainPageCard";
-
+import Filters from "./Components/Filters/Filters.jsx";
 function App() {
   return (
     <>
-      <Header />
-      <MainPageCard />
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage/>}/>
           <Route path="/" element={<ProfilePage/>}/>
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
       <Footer />
     </>
   );

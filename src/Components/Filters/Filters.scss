@@ -3,7 +3,7 @@
 
 .filter {
     margin: 0;
-    padding: 0;
+    padding: 1rem;
     &__label {
         margin:0;
         margin-bottom: 0.5rem;
@@ -25,22 +25,5 @@
             background-color: $light-grey;
             color: $primary-white;
     }
-    }
-
-    &__selected {
-        // background-color: $light-grey;
-        // color: $primary-white;
-    }
-
-    &--open {
-        // Styles here
-    }
-
-    &__title {
-        // Styles here
-    }
-
-    &__tags {
-        // Styles here
     }
 }

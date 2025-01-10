@@ -1,6 +1,9 @@
 import "./Header.scss";
 
-function Header({filterClickHandler}) {
+function Header(prop) {
+
+  console.log("this is prop", prop.filterClickHandler);
+
   return (
     <header className="header">
       <div className="header__left">
@@ -29,7 +32,8 @@ function Header({filterClickHandler}) {
         </svg>
         <h3 className="header__title">Money Mentor Matchmaker</h3>
       </div>
-      <button className="header__button"  onClick={filterClickHandler}>
+
+      <button className="header__button" onClick={prop.filterClickHandler}>
         <svg
           viewBox="0 0 15 11"
           xmlns="http://www.w3.org/2000/svg"
@@ -39,6 +43,7 @@ function Header({filterClickHandler}) {
         </svg>
         <p className="header__filter">FILTER</p>
       </button>
+
     </header>
   );
 }
