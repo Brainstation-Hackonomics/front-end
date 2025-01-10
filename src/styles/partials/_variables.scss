@@ -2,11 +2,18 @@
 $tablet-breakpoint: 48rem; // 768px;
 $desktop-breakpoint: 80rem; // 1280px;
 
-// ========Colors========
+// ========Colors======== //we can add more colors once we decide on a palette
 
 $primary-text: #333333;
 $primary-red: #ec111a;
 $primary-white: #ffffff;
 
-//========Text========
-$primary-font: "helvetica";
+$button-blue: #007eab;
+$button-hover: #035e80;
+
+$dark-grey: #423f3fe8;
+$grey: #655f5fe8;
+$light-grey: #a7a2a2eb;
+
+//========Text======== //this is also temporary
+$primary-font: "Lexend Deca", serif;

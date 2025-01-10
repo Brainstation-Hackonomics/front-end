@@ -22,9 +22,9 @@
 }
 //========Text========
 
-@mixin body-medium {
+@mixin body-small {
   // for tags
-  font-size: 0.625rem; //11px
+  font-size: 0.625rem; //10px
   font-family: $primary-font;
   font-weight: 300;
   @include tablet {
@@ -43,7 +43,7 @@
   }
 }
 
-@mixin header {
+@mixin header-style {
   ////these sizes are temporary and can be changed if needed
   font-size: 1.625rem; //26px
   font-family: $primary-font;
@@ -54,6 +54,82 @@
 }
 
 //========Button========
-@mixin button {
-  color: $primary-white;
+@mixin button-style {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  background-color: $primary-white;
+  color: $button-blue;
+  padding: 0.5rem 1rem;
+  font-family: $primary-font;
+  font-weight: 500;
+  border: $button-blue 0.08rem solid;
+  border-radius: 0.35rem;
+  text-align: center;
+  box-shadow: 0 0.063rem 0.313rem 0 rgba(0, 0, 0, 0.25);
+  @include body-medium;
+
+  &:hover {
+    background-color: $button-blue;
+    color: $primary-white;
+  }
+  @include tablet {
+    padding: 1rem 1.5rem;
+    border-width: 0.15rem;
+  }
 }
+@mixin blue-button {
+  margin-left: 2rem;
+  padding: 0.5rem 0;
+  font-size: 20px;
+  color: $button-blue;
+  font-weight: 700;
+  display: inline-block;
+
+  &:hover {
+    color: $button-hover;
+    border: $button-hover solid 2px;
+    border-width: 0 0 0.18rem 0;
+  }
+}
+
+//========Tags========
+@mixin tag-style {
+  color: $grey;
+  background-color: $primary-white;
+  padding: 0.25rem 0.75rem;
+  border: $light-grey solid 0.08rem;
+  border-radius: 0.35rem;
+  font-weight: 500;
+  box-shadow: 0 0.063rem 0.313rem 0 rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  @include body-small;
+  @include tablet {
+    padding: 0.25rem 1rem;
+    border-width: 0.15rem;
+    @include body-medium;
+  }
+  &:hover {
+    background-color: $light-grey;
+    color: $primary-white;
+  }
+}
+
+//========Card-border========
+@mixin card-border {
+  border: lightgrey solid 0.08rem;
+  border-radius: 0.55rem;
+  box-shadow: 0 0.063rem 0.313rem 0 rgba(0, 0, 0, 0.35);
+}
+//========Flex========
+
+//so im not sure how this works. i attempted it.
+
+// @mixin flex-center($direction: row, $justify: center, $align: center) {
+//   display: flex;
+//   flex-direction: $direction;
+//   justify-content: $justify;
+//   align-items: $align;
+// }
