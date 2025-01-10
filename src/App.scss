@@ -7,10 +7,16 @@
 
 * {
   box-sizing: border-box;
+  font-family: $primary-font;
 }
-
+//these 3 will eventually be deleted. i just wanted to demonstrate what the buttons, tags, and card borders
+//would look like. we can also makes changes as a group for over all styling.
 .test {
-  background-color: $primary-text;
-  color: $primary-white;
-  @include body-medium;
+  @include button-style;
+}
+.tag-style {
+  @include tag-style;
+}
+.card {
+  @include card-border;
 }
