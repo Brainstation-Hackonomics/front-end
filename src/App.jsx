@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage/>}/>
-          <Route path="/" element={<ProfilePage/>}/>
+          <Route path="/profile/" element={<ProfilePage/>}/>
         </Routes>
       </BrowserRouter>
       <Footer />

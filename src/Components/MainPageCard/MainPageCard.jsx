@@ -1,6 +1,7 @@
 import "./MainPageCard.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function MainPageCard() {
   const [cards, setCards] = useState(null);
@@ -30,6 +31,7 @@ export default function MainPageCard() {
   }
 
   return (
+    <Link to="/profile">
     <article className="main">
       {cards.map((card, index) => (
         <figure className="maincard" key={index}>
@@ -81,5 +83,6 @@ export default function MainPageCard() {
         </figure>
       ))}
     </article>
+    </Link>
   );
 }
