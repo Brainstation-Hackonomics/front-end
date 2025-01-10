@@ -12,11 +12,30 @@
 //these 3 will eventually be deleted. i just wanted to demonstrate what the buttons, tags, and card borders
 //would look like. we can also makes changes as a group for over all styling.
 .test {
+  margin: 0 2rem;
   @include button-style;
 }
 .tag-style {
+  margin: 2rem;
   @include tag-style;
 }
 .card {
+  margin: 0 2rem;
   @include card-border;
+}
+.logo {
+  & {
+    margin: 2rem;
+  }
+  & {
+    width: 20rem;
+  }
+}
+.blue-button {
+  @include blue-button;
+
+  &__icon {
+    position: relative;
+    top: 0.4rem;
+  }
 }
