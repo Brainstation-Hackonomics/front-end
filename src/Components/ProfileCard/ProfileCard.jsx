@@ -37,7 +37,7 @@ function ProfileCard() {
             alt=""
             className="profilecard__image"
           />
-          <h3 className="profilecard__header">{card.Name}</h3>
+          <p className="profilecard__header">{card.Name}</p>
           <p className="profilecard__subheader">Age:&nbsp;&nbsp;{card.Age}</p>
           <p className="profilecard__body"></p>
           <p className="profilecard__body">{card.intro}</p>
