@@ -1,0 +1,15 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.main-card {
+    @include card-border;
+    @include tag-style;
+
+    &__name {
+        // Styles here
+    }
+
+    &__photo {
+        // Styles here
+    }
+}

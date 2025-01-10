@@ -1,0 +1,18 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.filter {
+    @include tag-style;
+
+    &--open {
+        // Styles here
+    }
+
+    &__title {
+        // Styles here
+    }
+
+    &__tags {
+        // Styles here
+    }
+}
