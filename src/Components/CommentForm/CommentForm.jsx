@@ -6,10 +6,8 @@ export default function CommentForm({
 	handleSubmit,
 }) {
 	return (
-		<form className="comment-form" onSubmit={handleSubmit}>
-			<label htmlFor="name" className="comment-form__label">
-				Name
-			</label>
+		<form onSubmit={handleSubmit}>
+			<label htmlFor="name">Name</label>
 			<input
 				type="text"
 				id="name"
@@ -18,12 +16,10 @@ export default function CommentForm({
 				onChange={(e) =>
 					setNewComment((prev) => ({ ...prev, name: e.target.value }))
 				}
-				className="comment-form__input"
 				required
 			/>
-			<label htmlFor="comment" className="comment-form__label">
-				Comment
-			</label>
+
+			<label htmlFor="comment">Reviews</label>
 			<textarea
 				id="comment"
 				name="comment"
@@ -35,10 +31,13 @@ export default function CommentForm({
 						comment: e.target.value,
 					}))
 				}
-				className="comment-form__textarea"
 				required
 			></textarea>
-			<button type="submit" className="comment-form__submit">
+
+			<button
+				type="submit"
+				disabled={!newComment.name || !newComment.comment}
+			>
 				Submit
 			</button>
 		</form>
