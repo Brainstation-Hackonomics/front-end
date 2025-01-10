@@ -74,7 +74,6 @@ function ProfilePage() {
           </li>
         ))}
       </ul>
-      <Footer />
     </div>
   );
 }
