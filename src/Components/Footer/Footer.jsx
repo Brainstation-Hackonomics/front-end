@@ -18,14 +18,7 @@ function Footer() {
             xmlns="http://www.w3.org/2000/svg"
           >
             <g clipPath="url(#clip0)">
-              <mask
-                id="mask0"
-                maskUnits="userSpaceOnUse"
-                x="0"
-                y="0"
-                width="20"
-                height="20"
-              >
+              <mask id="mask0" maskUnits="userSpaceOnUse" x="0" y="0">
                 <path d="M0 0H20V20H0V0Z" fill="white" />
               </mask>
               <g mask="url(#mask0)">
