@@ -2,13 +2,12 @@ import "./Filters.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-function Filters() {
+function Filters(prop) {
   const [tags, setTags] = useState();
   const [personality, setPersonality] = useState([]);
   const [communication, setCommunication] = useState([]);
   const [philosophy, setPhilosopy] = useState([]);
   const [preference, setPreference] = useState([]);
-
 
   async function getTags() {
     try {
@@ -28,7 +27,9 @@ function Filters() {
       setPhilosopy(tags.philosophy)
       setPreference(tags.preference)
     }
-  }, [])
+  }, [tags])
+
+
 
   return (
     <>
@@ -38,7 +39,7 @@ function Filters() {
         <ul className="filter__list">
         {personality.map((item, index) => {
           return(
-            <li key={index} className="filter__tag">{item}</li>
+            <li key={index} className="filter__tag" onClick={prop.tagClickHandler}>{item}</li>
           )
         })}
         </ul>
@@ -46,25 +47,25 @@ function Filters() {
         <ul className="filter__list">
         {communication.map((item, index) => {
           return(
-            <li key={index} className="filter__tag">{item}</li>
+            <li key={index} className="filter__tag" onClick={prop.tagClickHandler}>{item}</li>
           )
         })}
         </ul>
 
-        <h3 className="filter__label">Philosophy</h3>
+        <h3 className="filter__label">Financial Philosophy</h3>
         <ul className="filter__list">
         {philosophy.map((item, index) => {
           return(
-            <li key={index} className="filter__tag">{item}</li>
+            <li key={index} className={prop.selectedTags.includes({item})?"filter__tags":"filter__tags"} onClick={prop.tagClickHandler}>{item}</li>
           )
         })}
         </ul>
 
-        <h3 className="filter__label">Preference</h3>
+        <h3 className="filter__label">Area of Preference</h3>
         <ul className="filter__list">
         {preference.map((item, index) => {
           return(
-            <li key={index} className="filter__tag">{item}</li>
+            <li key={index} className="filter__tag" onClick={prop.tagClickHandler}>{item}</li>
           )
         })}
         </ul>

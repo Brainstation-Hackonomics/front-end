@@ -20,6 +20,16 @@
     &__tag {
         @include tag-style;
         // background-color: ;
+
+        &--selected {
+            background-color: $light-grey;
+            color: $primary-white;
+    }
+    }
+
+    &__selected {
+        // background-color: $light-grey;
+        // color: $primary-white;
     }
 
     &--open {

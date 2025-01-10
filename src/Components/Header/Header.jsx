@@ -1,6 +1,6 @@
 import "./Header.scss";
 
-function Header() {
+function Header(prop) {
   return (
     <header className="header">
       <div className="header__left">
@@ -29,7 +29,7 @@ function Header() {
         </svg>
         <h3 className="header__title">Money Mentor Matchmaker</h3>
       </div>
-      <button className="header__button">
+      <button className="header__button"  onClick={prop.filterClickHandler}>
         <svg
           viewBox="0 0 15 11"
           xmlns="http://www.w3.org/2000/svg"

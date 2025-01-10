@@ -109,6 +109,7 @@
   font-size: 12rem;
 
   cursor: pointer;
+
   @include body-medium;
   @include tablet {
     padding: 0.25rem 1rem;
@@ -116,6 +117,11 @@
     font-size: 1rem;
   }
   &:hover {
+    background-color: $light-grey;
+    color: $primary-white;
+  }
+
+  &--selected {
     background-color: $light-grey;
     color: $primary-white;
   }
