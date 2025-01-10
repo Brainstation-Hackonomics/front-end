@@ -1,0 +1,27 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.profilecard {
+  padding: 2rem;
+  margin: 2rem;
+  @include card-border;
+  @include tablet {
+    margin: 5rem;
+  }
+  @include desktop {
+    margin: 15rem;
+  }
+  &__image {
+    background-color: grey;
+    height: 15rem;
+  }
+  &__header {
+    @include header-style;
+    // text-align: center;
+    background-color: lightgray;
+  }
+  &__tags {
+    height: 5rem;
+    background-color: lightgrey;
+  }
+}
