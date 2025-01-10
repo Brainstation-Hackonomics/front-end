@@ -44,12 +44,11 @@
 }
 
 @mixin header-style {
-  ////these sizes are temporary and can be changed if needed
-  font-size: 1.625rem; //26px
+  font-size: 1.625rem;
   font-family: $primary-font;
   font-weight: 400;
   @include tablet {
-    font-size: 3.25rem; //52px
+    font-size: 2.3rem;
   }
 }
 
@@ -123,13 +122,24 @@
   border-radius: 0.55rem;
   box-shadow: 0 0.063rem 0.313rem 0 rgba(0, 0, 0, 0.35);
 }
-//========Flex========
+// ========Flex========
 
-//so im not sure how this works. i attempted it.
+@mixin flex-box(
+  $justify-content: none,
+  $align-items: none,
+  $wrap: nowrap,
+  $flex-direction: row
+) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+  flex-direction: $flex-direction;
+}
 
-// @mixin flex-center($direction: row, $justify: center, $align: center) {
-//   display: flex;
-//   flex-direction: $direction;
-//   justify-content: $justify;
-//   align-items: $align;
-// }
+// =========Height & Width==============
+
+@mixin height-width($height, $width) {
+  height: $height;
+  width: $width;
+}
