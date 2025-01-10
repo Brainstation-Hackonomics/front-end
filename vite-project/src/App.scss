@@ -1,5 +1,5 @@
-// @use "./styles/partials/mixins" as *;
-// @use "./styles/partials/variables" as *;
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/variables" as *;
 
 // =============================
 // All elements
@@ -9,10 +9,8 @@
   box-sizing: border-box;
 }
 
-// =============================
-// Variables
-// =============================
-
-// =============================
-// Mixins
-// =============================
+.test {
+  background-color: $primary-text;
+  color: $primary-white;
+  @include body-medium;
+}
