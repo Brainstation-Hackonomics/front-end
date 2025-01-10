@@ -1,0 +1,59 @@
+@use "./variables" as *;
+
+// ========Mixins for screen breakpoints========
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+// ========Mixins to reset default styles========
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+//========Text========
+
+@mixin body-medium {
+  // for tags
+  font-size: 0.625rem; //11px
+  font-family: $primary-font;
+  font-weight: 300;
+  @include tablet {
+    font-size: 1.25rem; //20px
+    font-size: 0.75rem; //12px
+  }
+}
+
+@mixin body-medium {
+  //for comments, card text
+  font-size: 0.75rem; //12px
+  font-family: $primary-font;
+  font-weight: 300;
+  @include tablet {
+    font-size: 1.25rem; //20px
+  }
+}
+
+@mixin header {
+  ////these sizes are temporary and can be changed if needed
+  font-size: 1.625rem; //26px
+  font-family: $primary-font;
+  font-weight: 400;
+  @include tablet {
+    font-size: 3.25rem; //52px
+  }
+}
+
+//========Button========
+@mixin button {
+  color: $primary-white;
+}
