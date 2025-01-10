@@ -7,12 +7,13 @@ import { useState } from "react";
 
 function MainPage() {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  
   function filterClickHandler() {
     console.log("clicked")
     setIsFilterOpen(!isFilterOpen);
   }
 
-  const[selectedTags, setSelectedTags] = useState([])
+  const[selectedTags, setSelectedTags] = useState([]);
 
   function tagClickHandler(event) {
     if (!selectedTags.includes(event.target.innerHTML)) {
@@ -31,7 +32,9 @@ function MainPage() {
   return (
     <>
       <Header filterClickHandler={filterClickHandler}/>
+
       {isFilterOpen?<Filters tagClickHandler={tagClickHandler}  selectedTags={selectedTags}/>: ""}
+
       <MainPageCard></MainPageCard>
     </>
   );
