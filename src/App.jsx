@@ -2,10 +2,19 @@ import "./App.scss";
 import ScotiabankLogo from "./assets/logos/Scotiabank.png";
 import ProfileCard from "./Components/ProfileCard/ProfileCard";
 import Arrow from "../src/assets/images/Arrow.svg";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainPage from "./Pages/MainPage/MainPage.jsx";
+import ProfilePage from "./Pages/ProfilePage/ProfilePage.jsx"
 
 function App() {
   return (
     <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage/>}/>
+          <Route path="/" element={<ProfilePage/>}/>
+        </Routes>
+      </BrowserRouter>
       <img className="logo" src={ScotiabankLogo} alt="" />
       <br />
       <div className="test">BUTTON</div>

@@ -2,7 +2,25 @@
 @use "../../styles/partials/variables" as *;
 
 .filter {
-    @include tag-style;
+    margin: 0;
+    padding: 0;
+    &__label {
+        margin:0;
+        margin-bottom: 0.5rem;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    &__tag {
+        @include tag-style;
+        // background-color: ;
+    }
 
     &--open {
         // Styles here
