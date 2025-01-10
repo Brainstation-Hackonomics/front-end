@@ -2,10 +2,13 @@ import "./App.scss";
 import ScotiabankLogo from "./assets/logos/Scotiabank.png";
 import ProfileCard from "./Components/ProfileCard/ProfileCard";
 import Arrow from "../src/assets/images/Arrow.svg";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
     <>
+      <Header />
       <img className="logo" src={ScotiabankLogo} alt="" />
       <br />
       <div className="test">BUTTON</div>
@@ -22,6 +25,7 @@ function App() {
         autem? Exercitationem, modi.
       </p>
       <ProfileCard></ProfileCard>
+      <Footer />
     </>
   );
 }
