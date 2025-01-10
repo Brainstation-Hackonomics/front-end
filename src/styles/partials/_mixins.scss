@@ -143,3 +143,15 @@
   height: $height;
   width: $width;
 }
+
+// ===========Footer Icon==============
+
+@mixin footer-icon($height, $width) {
+  @include height-width($height, $width);
+  fill: #333;
+  margin-right: 1rem;
+
+  @include tablet {
+    margin-right: 1.5rem;
+  }
+}

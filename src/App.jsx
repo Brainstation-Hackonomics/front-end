@@ -3,6 +3,7 @@ import ScotiabankLogo from "./assets/logos/Scotiabank.png";
 import ProfileCard from "./Components/ProfileCard/ProfileCard";
 import Arrow from "../src/assets/images/Arrow.svg";
 import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         autem? Exercitationem, modi.
       </p>
       <ProfileCard></ProfileCard>
+      <Footer />
     </>
   );
 }
