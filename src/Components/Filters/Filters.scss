@@ -2,28 +2,31 @@
 @use "../../styles/partials/variables" as *;
 
 .filter {
+  margin: 0;
+  padding: 1rem;
+  &__label {
     margin: 0;
-    padding: 1rem;
-    &__label {
-        margin:0;
-        margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0 0.6rem;
+    margin: 0;
+    @include tablet {
+      padding: 1rem;
     }
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
+  }
 
+  &__tag {
+    @include tag-style;
+    // background-color: ;
 
-    &__tag {
-        @include tag-style;
-        // background-color: ;
-
-        &--selected {
-            background-color: $light-grey;
-            color: $primary-white;
+    &--selected {
+      background-color: $light-grey;
+      color: $primary-white;
     }
-    }
+  }
 }
