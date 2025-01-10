@@ -2,11 +2,41 @@
 @use "../../styles/partials/variables" as *;
 
 .header {
-    @include header-style;
+  padding: 1rem;
+  @include flex-box(space-between, center);
 
-    &__title {
-        // Styles here
+  @include tablet {
+    padding: 0 2rem;
+  }
+
+  &__left {
+    @include flex-box(flex-start, center);
+  }
+
+  &__logo {
+    @include height-width(2rem, 2rem);
+    min-width: 2rem;
+
+    @include tablet {
+      @include height-width(3rem, 3rem);
     }
+  }
 
-    
+  &__title {
+    @include header-style;
+  }
+
+  &__button {
+    @include button-style;
+    @include flex-box(space-between, center);
+  }
+
+  &__icon {
+    @include height-width(1rem, 1rem);
+    margin-right: 0.5rem;
+  }
+
+  &__filter {
+    margin: 0;
+  }
 }
