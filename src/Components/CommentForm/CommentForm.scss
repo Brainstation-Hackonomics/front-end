@@ -2,53 +2,59 @@
 @use "../../styles/partials/variables" as *;
 
 form {
-	@include flex-box($flex-direction: column, $align-items: flex-start);
-	gap: 1rem;
-	padding: 1rem;
-	background-color: $primary-white;
-	border-radius: 0.5rem;
-	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  @include flex-box($flex-direction: column, $align-items: flex-start);
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: $primary-white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
 
-	@include tablet {
-		padding: 1.5rem;
-	}
+  @include tablet {
+    padding: 1.5rem 5rem;
+  }
+  @include desktop {
+    padding: 1.5rem 15rem;
+  }
 }
 
 label {
-	font-weight: 600;
-	color: $grey;
+  font-weight: 600;
+  color: $grey;
+  padding-top: 1rem;
 }
 
 input,
 textarea {
-	@include body-medium;
-	width: 100%;
-	padding: 0.5rem;
-	border: 1px solid $light-grey;
-	border-radius: 0.25rem;
-	font-family: $primary-font;
+  @include body-medium;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid $light-grey;
+  border-radius: 0.25rem;
+  font-family: $primary-font;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 
-	&:focus {
-		outline: 2px solid $button-blue;
-	}
+  &:focus {
+    outline: 2px solid $button-blue;
+  }
 
-	@include tablet {
-		font-size: 1.125rem;
-	}
+  @include tablet {
+    font-size: 1.125rem;
+  }
 }
 
 textarea {
-	resize: vertical;
+  resize: vertical;
 }
 
 button {
-	@include button-style;
-	width: 100%;
-	max-width: 10rem;
-	text-align: center;
+  @include button-style;
+  width: 100%;
+  max-width: 10rem;
+  text-align: center;
+  margin-top: 0.5rem;
 
-	&:disabled {
-		background-color: $light-grey;
-		cursor: not-allowed;
-	}
+  //   &:disabled {
+  //     background-color: $light-grey;
+  //     cursor: not-allowed;
+  //   }
 }

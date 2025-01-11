@@ -31,7 +31,6 @@ export default function MainPageCard() {
   }
 
   return (
-    <Link to="/profile">
     <article className="main">
       {cards.map((card, index) => (
         <figure className="maincard" key={index}>
@@ -83,6 +82,5 @@ export default function MainPageCard() {
         </figure>
       ))}
     </article>
-    </Link>
   );
 }

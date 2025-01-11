@@ -24,6 +24,7 @@
 
   &__title {
     @include header-style;
+    padding-left: 1rem;
   }
 
   &__button {

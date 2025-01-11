@@ -3,18 +3,22 @@
 
 .maincard {
   padding: 2rem;
-  margin: 1rem 2rem;
+  margin: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+
   @include card-border;
   @include tablet {
-    margin: 1rem 5rem;
+    margin: 2rem 5rem;
   }
   @include desktop {
-    margin: 1rem 15rem;
+    margin: 3rem 15rem;
   }
   &__image {
-    background-color: grey;
+    background-color: $primary-white;
+    object-fit: scale-down;
     height: 15rem;
-    @include card-border;
+    justify-items: center;
     @include tablet {
       height: 20rem;
     }
@@ -24,10 +28,15 @@
   }
   &__header {
     font-size: 40px;
+    color: $primary-text;
+    text-decoration: none;
+    text-align: center;
   }
   &__body {
     color: $dark-grey;
     @include body-medium;
+    margin: 0.5rem 0;
+    display: inline-block;
   }
   &__tag-section {
     height: auto;
@@ -40,13 +49,11 @@
     @include reset;
   }
   &__items {
-    width: 5rem;
     margin: 0.5rem 1rem 0 0;
     display: inline;
     text-align: center;
+    text-decoration: none;
     @include tag-style;
-    @include tablet {
-      width: 8rem;
-    }
+    border-color: $button-blue;
   }
 }

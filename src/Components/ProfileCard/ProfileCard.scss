@@ -4,6 +4,8 @@
 .profilecard {
   padding: 2rem;
   margin: 1rem 2rem;
+  display: flex;
+  align-items: flex-start;
   @include card-border;
   @include tablet {
     margin: 1rem 5rem;
@@ -12,9 +14,8 @@
     margin: 1rem 15rem;
   }
   &__image {
-    background-color: grey;
     height: 15rem;
-    @include card-border;
+    object-fit: scale-down;
     @include tablet {
       height: 20rem;
     }
@@ -24,10 +25,14 @@
   }
   &__header {
     font-size: 40px;
+    padding: 1rem 0;
+    margin: 0;
   }
   &__body {
     color: $dark-grey;
     @include body-medium;
+    margin: 0.5rem 0;
+    display: inline-block;
   }
   &__tag-section {
     height: 6rem;
@@ -40,13 +45,10 @@
     @include reset;
   }
   &__items {
-    width: 5rem;
     margin: 0.5rem 1rem 0 0;
     display: inline;
     text-align: center;
     @include tag-style;
-    @include tablet {
-      width: 8rem;
-    }
+    border-color: $button-blue;
   }
 }
