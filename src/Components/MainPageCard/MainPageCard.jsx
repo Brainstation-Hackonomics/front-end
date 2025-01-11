@@ -31,56 +31,58 @@ export default function MainPageCard() {
   }
 
   return (
-    <article className="main">
-      {cards.map((card, index) => (
-        <figure className="maincard" key={index}>
-          <img className="maincard__image" src={`${url}/${card.photo}`}></img>
-          <h3 className="maincard__header">{card.Name}</h3>
-          <p className="maincard__body">{card.intro}</p>
-          <section className="maincard__tag-section">
+    <Link className="maincard__link" to="/profile">
+      <article className="main">
+        {cards.map((card, index) => (
+          <figure className="maincard" key={index}>
+            <img className="maincard__image" src={`${url}/${card.photo}`}></img>
+            <h3 className="maincard__header">{card.Name}</h3>
+            <p className="maincard__body">{card.intro}</p>
             <section className="maincard__tag-section">
-              <ul className="maincard__list">
-                <>
-                  {" "}
-                  {card.filter &&
-                    card.filter.personality.map((tag, tagIndex) => (
-                      <li className="maincard__items" key={tagIndex}>
-                        {tag}
-                      </li>
-                    ))}{" "}
-                </>
-                <>
-                  {" "}
-                  {card.filter &&
-                    card.filter.communication.map((tag, tagIndex) => (
-                      <li className="maincard__items" key={tagIndex}>
-                        {tag}
-                      </li>
-                    ))}{" "}
-                </>
-                <>
-                  {" "}
-                  {card.filter &&
-                    card.filter.philosophy.map((tag, tagIndex) => (
-                      <li className="maincard__items" key={tagIndex}>
-                        {tag}
-                      </li>
-                    ))}{" "}
-                </>
-                <>
-                  {" "}
-                  {card.filter &&
-                    card.filter.personality.map((tag, tagIndex) => (
-                      <li className="maincard__items" key={tagIndex}>
-                        {tag}
-                      </li>
-                    ))}{" "}
-                </>
-              </ul>
+              <section className="maincard__tag-section">
+                <ul className="maincard__list">
+                  <>
+                    {" "}
+                    {card.filter &&
+                      card.filter.personality.map((tag, tagIndex) => (
+                        <li className="maincard__items" key={tagIndex}>
+                          {tag}
+                        </li>
+                      ))}{" "}
+                  </>
+                  <>
+                    {" "}
+                    {card.filter &&
+                      card.filter.communication.map((tag, tagIndex) => (
+                        <li className="maincard__items" key={tagIndex}>
+                          {tag}
+                        </li>
+                      ))}{" "}
+                  </>
+                  <>
+                    {" "}
+                    {card.filter &&
+                      card.filter.philosophy.map((tag, tagIndex) => (
+                        <li className="maincard__items" key={tagIndex}>
+                          {tag}
+                        </li>
+                      ))}{" "}
+                  </>
+                  <>
+                    {" "}
+                    {card.filter &&
+                      card.filter.personality.map((tag, tagIndex) => (
+                        <li className="maincard__items" key={tagIndex}>
+                          {tag}
+                        </li>
+                      ))}{" "}
+                  </>
+                </ul>
+              </section>
             </section>
-          </section>
-        </figure>
-      ))}
-    </article>
+          </figure>
+        ))}
+      </article>
+    </Link>
   );
 }

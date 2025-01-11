@@ -6,7 +6,6 @@
   margin: 1.5rem 2rem;
   display: flex;
   flex-direction: column;
-
   @include card-border;
   @include tablet {
     margin: 2rem 5rem;
@@ -55,5 +54,8 @@
     text-decoration: none;
     @include tag-style;
     border-color: $button-blue;
+  }
+  &__link {
+    @include reset;
   }
 }

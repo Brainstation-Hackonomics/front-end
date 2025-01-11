@@ -5,17 +5,19 @@
   padding: 2rem;
   margin: 1rem 2rem;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   @include card-border;
   @include tablet {
-    margin: 1rem 5rem;
+    margin: 2rem 5rem;
   }
   @include desktop {
-    margin: 1rem 15rem;
+    margin: 3rem 15rem;
   }
   &__image {
     height: 15rem;
     object-fit: scale-down;
+    display: flex;
+    justify-items: center;
     @include tablet {
       height: 20rem;
     }
